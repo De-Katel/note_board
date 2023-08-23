@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface IAppModalData {
-    type: 'addCard' | 'deleteCard'| 'editCard'
+    type: 'addCard' | 'deleteCard'|'editSticker'| 'editCard'|'addSticker'|'deleteSticker'
     title: string
 }
 

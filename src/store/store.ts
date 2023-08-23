@@ -19,9 +19,9 @@ import appModalSlice from './slices/appModalSlice';
 
 const persistConfig = {
   key: 'root',
-  version: 2,
+  version: 7,
   storage,
-  blacklist: []
+  // blacklist: ['cardData','appModal']
 }
 
 

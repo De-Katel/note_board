@@ -1,6 +1,6 @@
 import './App.css'
 
-import { ISingleCard } from './store/slices/cardDataSlice'
+import { ISingleCard, addNewCard } from './store/slices/cardDataSlice'
 import { setAppModalData } from './store/slices/appModalSlice'
 
 import Card from './components/card/card'
@@ -40,12 +40,32 @@ function App() {
         min-h-[94vh]
         '>
 
-        <h1 className='text-center text-3xl  text-neutral-500 pt-2'  >
+        <h1 className='text-center text-3xl  text-neutral-500 py-2'  >
           My note board
         </h1>
         <div className=' flex justify-end'>
           <button
-            className='bg-blue-400 mr-5 p-1 text-white flex justify-center w-40  items-center  hover:bg-blue-500 '
+            className=' px-5 bg-amber-600 w-auto mr-5 p-1 text-white flex justify-center items-center  hover:bg-blue-500 '
+            onClick={() => dispatch(
+              addNewCard(
+                {
+                  type: 'stickersBoard',
+                  id: Math.random(),
+                  header: '',
+                  text: '',
+                  colSpanNumber: 12,
+                  rowSpanNumber: 2
+                }
+              )
+            )}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            add stickers board
+          </button>
+          <button
+            className=' px-5 bg-blue-400 mr-5 p-1 text-white flex justify-center w-auto  items-center  hover:bg-blue-500 '
             onClick={() => dispatch(setAppModalData({ type: 'addCard', title: 'добавить катрочку' }))}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

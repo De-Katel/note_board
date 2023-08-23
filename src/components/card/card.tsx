@@ -64,8 +64,7 @@ const Card = (
 
     }
 
-    const dragOverHandler = (e: React.DragEvent<HTMLDivElement>, card: ISingleCard) => {
-        e.preventDefault();
+    const dropHandler = (card: ISingleCard) => {
         dispatch(swapCardPositionOnBoard(card))
     }
 
@@ -89,7 +88,8 @@ const Card = (
             draggable={true}
             onDragStart={() => dragStartEndHandler(cardData)}
             onDragEnd={() => dragStartEndHandler(null)}
-            onDragOver={e => dragOverHandler(e, cardData)}
+            onDragOver={e => e.preventDefault()}
+            onDrop={() => dropHandler(cardData)}
         >
             <div className="flex  self-start">
                 <button
@@ -97,7 +97,8 @@ const Card = (
                     className=" disabled:hover:text-gray-400 disabled:text-gray-400 hover:text-blue-500"
                     onClick={putColSpanNumber}
                 >
-                    <Minus /></button>
+                    <Minus />
+                </button>
                 <ArrowAutofitWidth />
                 <button
                     disabled={cardData.colSpanNumber > 11}

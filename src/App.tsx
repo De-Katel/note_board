@@ -45,7 +45,7 @@ function App() {
         </h1>
         <div className=' flex justify-end'>
           <button
-            className='bg-blue-400/80 mr-5 p-1 text-white flex justify-center w-40  items-center  hover:bg-blue-400 '
+            className='bg-blue-400 mr-5 p-1 text-white flex justify-center w-40  items-center  hover:bg-blue-500 '
             onClick={() => dispatch(setAppModalData({ type: 'addCard', title: 'добавить катрочку' }))}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

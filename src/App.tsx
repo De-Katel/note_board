@@ -6,7 +6,7 @@ import { setAppModalData } from './store/slices/appModalSlice'
 import Card from './components/card/card'
 
 import { useAppSelector, useAppDispatch } from './store/hooks'
-import AppModal from './components/appModal/AppModal'
+import AppModal from './components/appModal/appModal'
 
 
 const renderCardList = (
@@ -54,7 +54,7 @@ function App() {
             add card
           </button>
         </div>
-        <div className=' p-5 grid gap-3 auto-cols-fr grid-cols-12 grid-flow-row-dense '>
+        <div className=' p-5 grid gap-3 auto-cols-fr grid-cols-12  '>
           {renderCardList(cardList)}
         </div>
       </div>

@@ -93,7 +93,7 @@ const AppModal = () => {
                 id: Math.random(),
                 header: nameInputValue,
                 text: descriptionAreaValue,
-                colSpanNumber: 4,
+                colSpanNumber:4,
                 rowSpanNumber: 1
             }
         ));
